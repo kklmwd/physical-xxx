@@ -1,6 +1,6 @@
 {
-  "name": "Workout Logger",
-  "short_name": "Workout Log",
+  "name": "Olahtubuh",
+  "short_name": "Olahtubuh",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
