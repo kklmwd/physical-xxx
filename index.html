@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>PPL Log</title>
+<title>Workout Logger</title>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#0c0c0d">
 <link rel="icon" href="icon-192.png">
@@ -165,7 +165,7 @@
 <body>
 
 <header>
-  <h1>PPL / Abs / Upper</h1>
+  <h1>Workout Logger</h1>
   <div class="tabs" id="tabs"></div>
   <div class="view-toggle">
     <button id="btnLog" class="active">Log</button>
@@ -210,29 +210,29 @@
 
 <script>
 const DEFAULT_PLAN = {
-  Push: [
-    { name: "Barbell/DB Bench Press", sets: 4, reps: "5-8" },
-    { name: "Overhead Press", sets: 3, reps: "6-10" },
-    { name: "Incline DB Press", sets: 3, reps: "8-12" },
-    { name: "Lateral Raise", sets: 3, reps: "12-15" },
-    { name: "Cable/DB Triceps Extension", sets: 3, reps: "10-12" },
-    { name: "Dips or Push-ups (finisher)", sets: 2, reps: "AMRAP" },
+  Chest: [
+    { name: "Power Clean", sets: 3, reps: "8-12" },
+    { name: "Incline Press (Dumbbell or Barbell)", sets: 3, reps: "8-12" },
+    { name: "Flat Dumbbell Bench Press", sets: 3, reps: "8-12" },
+    { name: "Tricep Extensions / Pushdown", sets: 3, reps: "8-12" },
+    { name: "Seated Hammer Curls", sets: 3, reps: "8-12" },
   ],
-  Pull: [
-    { name: "Deadlift or Rack Pull", sets: 3, reps: "5" },
-    { name: "Pull-ups / Lat Pulldown", sets: 4, reps: "6-10" },
-    { name: "Barbell/Chest-Supported Row", sets: 3, reps: "8-10" },
-    { name: "Face Pull", sets: 3, reps: "12-15" },
-    { name: "Barbell/DB Curl", sets: 3, reps: "10-12" },
-    { name: "Hammer Curl", sets: 2, reps: "12" },
+  Back: [
+    { name: "Snatch", sets: 3, reps: "8-12" },
+    { name: "Behind the Back Shoulder Press", sets: 3, reps: "8-12" },
+    { name: "Chest Supported Dumbbell Lateral Raises", sets: 3, reps: "8-12" },
+    { name: "Face Pulls (Rope)", sets: 3, reps: "8-12" },
+    { name: "T-Bar Row (or Seated Cable Row)", sets: 3, reps: "8-12" },
+    { name: "Lat Pulldown", sets: 3, reps: "8-12" },
+    { name: "Chest Supported Row (Dumbbell or Machine)", sets: 3, reps: "8-12" },
   ],
   Legs: [
-    { name: "Leg Press (sub for back squat)", sets: 4, reps: "8-10" },
-    { name: "Romanian Deadlift (light-mod load)", sets: 3, reps: "8-10" },
-    { name: "Walking Lunge / Split Squat", sets: 3, reps: "10/leg" },
-    { name: "Leg Curl", sets: 3, reps: "10-12" },
-    { name: "Standing Calf Raise", sets: 3, reps: "12-15" },
-    { name: "Hip Thrust", sets: 3, reps: "10-12" },
+    { name: "Barbell Back Squat (or Leg Press)", sets: 3, reps: "8-12" },
+    { name: "Romanian Deadlifts (RDLs)", sets: 3, reps: "8-12" },
+    { name: "Walking Lunges (Dumbbell or Bodyweight)", sets: 3, reps: "8-12" },
+    { name: "Leg Extensions", sets: 3, reps: "8-12" },
+    { name: "Hamstring Extensions", sets: 3, reps: "8-12" },
+    { name: "Standing Calf Raises", sets: 3, reps: "8-12" },
   ],
   Abs: [
     { name: "Dead Bug", sets: 3, reps: "10/side" },
@@ -241,15 +241,6 @@ const DEFAULT_PLAN = {
     { name: "Hanging Knee Raise", sets: 3, reps: "10-12" },
     { name: "Side Plank", sets: 3, reps: "30-45s/side" },
     { name: "Farmer's Carry", sets: 3, reps: "40m" },
-  ],
-  Upper: [
-    { name: "Flat DB Press", sets: 3, reps: "10-12" },
-    { name: "Seated Row", sets: 3, reps: "10-12" },
-    { name: "Arnold Press", sets: 3, reps: "10-12" },
-    { name: "Lat Pulldown (wide grip)", sets: 3, reps: "10-12" },
-    { name: "Cable Fly", sets: 2, reps: "12-15" },
-    { name: "Rear Delt Fly", sets: 2, reps: "12-15" },
-    { name: "Curl + Triceps Superset", sets: 2, reps: "12/12" },
   ],
 };
 

@@ -1,6 +1,6 @@
 {
-  "name": "PPL Workout Log",
-  "short_name": "PPL Log",
+  "name": "Workout Logger",
+  "short_name": "Workout Log",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
